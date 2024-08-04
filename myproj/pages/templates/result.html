@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR Result</title>
+</head>
+<body>
+    <h1>Extracted Text</h1>
+    <pre>{{ text }}</pre>
+    <a href="{% url 'download_text' %}?text={{ text|urlencode }}">Download as Text File</a>
+    <a href="{% url 'download_pdf' %}?text={{ text|urlencode }}">Download as PDF</a>
+</body>
+</html>
